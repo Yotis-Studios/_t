@@ -1,7 +1,4 @@
-function _t(key){
-	// check _t is initialized
-	if (global.langJSON == undefined) _tInit();
-	
+function _t(key){	
 	var langStr = _deepSearchJSON(global.langJSON, key);
 
 	if (langStr == undefined) {
@@ -33,7 +30,7 @@ function _t_setLang(lang) {
 	}
 }
 
-function _t_getLangIndex(lang) {
+function _t_getLangIndex(lang) {	
 	for (var i = 0; i < ds_list_size(global.langList); i++) {
 		if (lang == global.langList[| i]) return i;
 	}
